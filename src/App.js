@@ -1,5 +1,10 @@
-import React from 'react';
-import { Categories, Navbar } from './components';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import { auth } from './utils/firebase/firebase.config';
+
+import { Navbar } from './components';
+import { Home, Shop, Hats, Authentication } from './pages';
 
 const App = () => {
   const CATEGORIES = [
@@ -29,11 +34,19 @@ const App = () => {
       imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     },
   ];
+  // authentication token
+  useEffect(() => {}, []);
 
   return (
     <div className="app__wrapper">
-      <Navbar />
-      <Categories clotheCategories={CATEGORIES} />
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route path="/auth" element={<Authentication />} />
+          <Route index element={<Home clotheCategories={CATEGORIES} />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/hats" element={<Hats />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
