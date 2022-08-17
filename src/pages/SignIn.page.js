@@ -2,12 +2,12 @@ import React from 'react';
 
 import { SignIn } from '../components';
 
-const Authentication = () => {
+const SignInPage = () => {
   return (
-    <div className="page-container">
+    <div className="page-container flex-center">
       <SignIn />
     </div>
   );
 };
 
-export default Authentication;
+export default SignInPage;

@@ -1,0 +1,102 @@
+@import '../../utils/sass/mixins';
+
+.form {
+  &__container {
+    // background-color: rgb(199, 31, 31);
+    width: 50vw;
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    @include respond(big-desktop) {
+      width: 40vw;
+      padding: 3rem;
+    }
+
+    @include respond(tab-land) {
+      width: 70vw;
+      padding: 3rem;
+    }
+
+    @include respond(tab-port) {
+      width: 90vw;
+      padding: 2rem;
+    }
+    @include respond(phone) {
+      width: 100vw;
+      padding: 0.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    color: transparent;
+    background-image: linear-gradient(45deg, #495057, #ced4da, #cc5de8, #868e96, #212529);
+    background-clip: text;
+    transform: skewX(-7deg);
+  }
+
+  &__card {
+    background-color: #e9ecef;
+    width: 100%;
+    // min-height: 50vh;
+    padding: 3rem 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem rgba(#000, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  &__inputs {
+    // background-color: #fff;
+    width: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond(phone) {
+      width: 80%;
+      flex-direction: column;
+    }
+  }
+  &__btn-submit {
+    width: 70%;
+  }
+  &__signUp-link .nav__link {
+    font-size:2rem;
+    color: lime;
+    &:hover {
+      color:green;
+    }
+  }
+}

@@ -1,4 +1,11 @@
 .page-container {
-  // background-color: rgb(202, 189, 5);
+  // background-color: rgba(#f299eb, 0.8);
   width: 100%;
+  min-height: 85vh;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

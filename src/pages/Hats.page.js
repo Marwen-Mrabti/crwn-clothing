@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hats = () => {
+const HatsPage = () => {
   return <div>Hats.page</div>;
 };
 
-export default Hats;
+export default HatsPage;

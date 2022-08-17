@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { auth } from './utils/firebase/firebase.config';
 
 import { Navbar } from './components';
-import { Home, Shop, Hats, Authentication } from './pages';
+import { Home, Shop, Hats, SignIn, SignUp } from './pages';
 
 const App = () => {
   const CATEGORIES = [
@@ -41,7 +41,8 @@ const App = () => {
     <div className="app__wrapper">
       <Routes>
         <Route path="/" element={<Navbar />}>
-          <Route path="/auth" element={<Authentication />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
           <Route index element={<Home clotheCategories={CATEGORIES} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/hats" element={<Hats />} />

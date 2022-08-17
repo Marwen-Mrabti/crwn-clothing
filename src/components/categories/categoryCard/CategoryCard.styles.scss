@@ -1,3 +1,5 @@
+@import '../../../utils/sass/mixins';
+
 .category-container {
   background-color: #dee2e6;
   min-width: 30%;
@@ -69,13 +71,13 @@
       font-size: 1.6rem;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @include respond(tab-land) {
     width: 45%;
   }
-  @media screen and (max-width: 660px) {
+  @include respond(tab-port) {
     width: 48%;
   }
-  @media screen and (max-width: 475px) {
+  @include respond(phone) {
     width: 100%;
   }
 }

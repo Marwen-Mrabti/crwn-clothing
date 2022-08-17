@@ -1,7 +1,7 @@
 import React from 'react';
 import { Categories } from '../components';
 
-const Home = ({ clotheCategories }) => {
+const HomePage = ({ clotheCategories }) => {
   return (
     <div className="page-container">
       <Categories clotheCategories={clotheCategories} />
@@ -9,4 +9,4 @@ const Home = ({ clotheCategories }) => {
   );
 };
 
-export default Home;
+export default HomePage;

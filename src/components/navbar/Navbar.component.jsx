@@ -12,8 +12,8 @@ const Navbar = () => {
           <CrwnLogo className="nav__logo-img" />
         </Link>
         <div className="nav__menu">
-          <Link to="/auth" className="nav__link">
-            sign in
+          <Link to="/sign-in" className="nav__link">
+            login
           </Link>
           <Link to="/shop" className="nav__link">
             shop
