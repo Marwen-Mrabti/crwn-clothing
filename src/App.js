@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { auth } from './utils/firebase/firebase.config';
@@ -34,6 +34,7 @@ const App = () => {
       imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     },
   ];
+
   // authentication token
   useEffect(() => {}, []);
 

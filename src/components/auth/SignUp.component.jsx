@@ -23,7 +23,6 @@ const SignUp = () => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-
     if (password !== confPassword) {
       alert('please make sure your passwords is the same');
       return;

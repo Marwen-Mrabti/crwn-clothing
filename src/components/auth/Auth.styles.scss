@@ -93,10 +93,12 @@
     width: 70%;
   }
   &__signUp-link .nav__link {
-    font-size:2rem;
-    color: lime;
+    font-size: 1.8rem;
+    color: #4263eb;
+
     &:hover {
-      color:green;
+      color: #748ffc;
+      transform: translateY(-1px);
     }
   }
 }
