@@ -1,10 +1,12 @@
 import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+
 import { userSignOut } from '../../utils/firebase/firebase.config';
+import { UserContext } from '../../contexts/User.context';
 
 import './Navbar.styles.scss';
 import { ReactComponent as CrwnLogo } from '../../assets/Logo-crown.svg';
-import { UserContext } from '../../contexts/User.context';
+import CartIcon from '../cartIcon/CartIcon.component';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -48,6 +50,7 @@ const Navbar = () => {
               logout
             </button>
           )}
+          <CartIcon />
         </div>
       </nav>
       <Outlet />

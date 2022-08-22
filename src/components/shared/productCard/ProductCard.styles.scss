@@ -1,0 +1,89 @@
+@import '../sass/mixins';
+
+.product {
+  &__card {
+    position: relative;
+    flex: 1 1 25%;
+
+    background-color: #fff;
+    color: #222;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+    padding-bottom: 1rem;
+    background-image: linear-gradient(
+      rgba(#5e9ad9, 0.85) 20%,
+      rgba(#e271ad, 0.5),
+      #fff max(80%)
+    );
+    background-position: top;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include respond(big-desktop) {
+      flex: 0 1 20%;
+    }
+    @include respond(tab-port) {
+      flex: 0 1 48%;
+    }
+    @include respond(phone) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+  }
+
+  &__info {
+    // background-color: #fff;
+    align-self: stretch;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+    &-name {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+    &-price {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+
+  &__cta-btn {
+    width: 80%;
+    padding: 1rem 3rem;
+    border-radius: 0.2rem;
+
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  &__card:hover &__cta-btn {
+    top: 60%;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  //for touch screen
+  @media only screen and (hover: none) {
+    &__cta-btn {
+      top: 70%;
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+}

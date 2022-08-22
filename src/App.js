@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { auth } from './utils/firebase/firebase.config';
-
 import { Navbar } from './components';
-import { Home, Shop, Hats, SignIn, SignUp } from './pages';
+import { Home, Shop, SignIn, SignUp } from './pages';
 
 const App = () => {
   const CATEGORIES = [
@@ -35,9 +33,6 @@ const App = () => {
     },
   ];
 
-  // authentication token
-  useEffect(() => {}, []);
-
   return (
     <div className="app__wrapper">
       <Routes>
@@ -46,7 +41,6 @@ const App = () => {
           <Route path="/sign-up" element={<SignUp />} />
           <Route index element={<Home clotheCategories={CATEGORIES} />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/hats" element={<Hats />} />
         </Route>
       </Routes>
     </div>

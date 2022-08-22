@@ -1,7 +1,12 @@
 import React from 'react';
+import { Shop } from '../components';
 
 function ShopPage() {
-  return <div>Shop.page</div>;
+  return (
+    <div className="page-container">
+      <Shop />
+    </div>
+  );
 }
 
 export default ShopPage;

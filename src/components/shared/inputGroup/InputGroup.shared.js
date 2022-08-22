@@ -1,5 +1,5 @@
-import React from 'react';
 import './InputGroup.styles.scss';
+import React from 'react';
 
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 

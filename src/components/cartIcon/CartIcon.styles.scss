@@ -1,0 +1,103 @@
+@import '../shared/sass/mixins';
+
+.cart-icon {
+  // background-color: rgb(49, 209, 27);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+
+  &__svg {
+    width: 100%;
+    height: 4rem;
+    fill: #999;
+    transition: all 0.3s ease-in-out;
+  }
+  &__count {
+    // background-color: red;
+    color: #999;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &__svg {
+    color: #f7f7f7 !important;
+    fill: #f7f7f7 !important;
+  }
+  &:hover &__count {
+    color: #f7f7f7;
+  }
+
+  &__empty {
+    // background-color: rgb(196, 26, 26);
+    width: 100%;
+    font-size: 2.2rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  &__list {
+
+    transition: all 2s linear;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 30vw;
+    height: 60vh;
+    padding: 0.5rem;
+    background-image: linear-gradient(to bottom right, #fff, #f8f9fa, #e9ecef);
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 1rem 0.5rem 0.5rem 1rem;
+    box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+
+    position: absolute;
+    top: 100%;
+    left: -25vw;
+    transform: translate(0, 3rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+      width: 60vw;
+      left: -55vw;
+      transform: translate(0, 3.5rem);
+    }
+    @include respond(phone) {
+      width: 90vw;
+      left: -55vw;
+      transform: translate(0, 2.5rem);
+    }
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #999;
+
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    &-img {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &-info {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #222;
+      span {
+        display: block;
+        margin: 0.5rem;
+      }
+    }
+  }
+}

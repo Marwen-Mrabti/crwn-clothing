@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import './Auth.styles.scss';
-import InputGroup from '../shared/InputGroup.shared';
+import InputGroup from '../shared/inputGroup/InputGroup.shared';
 
 import {
   signInWithGooglePopup,

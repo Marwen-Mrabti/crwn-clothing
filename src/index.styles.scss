@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-@import './utils/sass/mixins';
+@import './components/shared/sass/mixins';
+/****************************************/
+//scroll bar
+/****************************************/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 /****************************************/
 
 *,
@@ -72,7 +89,7 @@ body {
 .btn {
   display: inline-block;
   cursor: pointer;
-  width: 30%;
+  width: max-content;
   font-size: 1.8rem;
   font-weight: 500;
   padding: 1rem 3rem;
@@ -124,5 +141,32 @@ body {
       color: #fa5252;
       transform: translateY(-3px);
     }
+  }
+  &__trash {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: #222;
+    }
+    &:hover svg {
+      fill: #fa5252;
+    }
+  }
+  &__checkout {
+    width: 100%;
+    border-radius: 10rem;
+    text-align: center;
+    color: #f2f2f2;
+    background-color: #000;
+  }
+  &__disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: #495057;
   }
 }
