@@ -35,8 +35,8 @@ const CartIcon = () => {
                     {item.count} X ${item.price}
                   </span>
                 </div>
-                <button onClick={() => handleOnDelete(item.id)} className="btn__trash">
-                  <BiTrash />
+                <button onClick={() => handleOnDelete(item.id)} className="btn__icon">
+                  <BiTrash fill='red' />
                 </button>
               </div>
             ))

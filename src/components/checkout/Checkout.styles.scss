@@ -1,0 +1,30 @@
+@import '../shared/sass/mixins';
+
+.checkout__container {
+  background-image: linear-gradient(to right, #f2f2f2, #f0f0f0, #f7f7f7);
+  max-width: 70%;
+  min-height: fit-content;
+  margin: 2rem auto;
+  padding: 1rem;
+
+  /**********layout*******/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  &:nth-child(even) {
+    // flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
+
+.checkout__total-price {
+  // background-color: #fff;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.6rem;
+  border-top: 2px solid #999;
+
+  display: flex;
+  justify-content: flex-end;
+}

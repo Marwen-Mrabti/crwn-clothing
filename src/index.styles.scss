@@ -142,21 +142,21 @@ body {
       transform: translateY(-3px);
     }
   }
-  &__trash {
+  &__icon {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-
+    transition: all 0.2s ease-in-out;
     svg {
       width: 3rem;
       height: 3rem;
-      fill: #222;
     }
-    &:hover svg {
-      fill: #fa5252;
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.05);
     }
   }
+
   &__checkout {
     width: 100%;
     border-radius: 10rem;
