@@ -53,13 +53,10 @@ export const CartProvider = ({ children }) => {
           item.id === product.id ? { ...item, count: item.count - 1 } : item
         )
       );
+      /******** IF CART EMPTY NAVIGATE TO SHOP  ********* */
+      !cartItems.length && navigate('/shop');
     }
   };
-
-  /******** IF CART EMPTY NAVIGATE TO SHOP  ********* */
-  useEffect(() => {
-    !cartItems.length && navigate('/shop');
-  }, [cartItems, navigate]);
 
   /********* total price  *************/
   useEffect(() => {

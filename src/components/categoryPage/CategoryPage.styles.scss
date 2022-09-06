@@ -1,0 +1,39 @@
+@import '../shared/sass/mixins';
+
+.category {
+  &__container {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    font-size: 6rem;
+    color: #222;
+    text-transform: uppercase;
+  }
+
+  &__products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: start;
+    gap: 4rem;
+
+    @include respond(big-desktop) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

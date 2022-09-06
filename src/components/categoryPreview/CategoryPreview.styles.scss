@@ -1,0 +1,55 @@
+@import '../shared/sass/mixins';
+
+.category-preview-container {
+  padding:2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  .title {
+    color: darkblue;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+    &__link {
+      &:visited,
+      &:link {
+        display: inline-block;
+        text-decoration: none;
+        color: currentColor;
+        transition: all 0.2s linear;
+      }
+
+      &:hover,
+      &:active {
+        transform: scale(1.1) translateY(-0.5rem);
+        filter: brightness(120%);
+      }
+    }
+  }
+
+  .preview {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: start;
+    gap: 4rem;
+
+    @include respond(big-desktop) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

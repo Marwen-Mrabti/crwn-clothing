@@ -1,18 +1,22 @@
 import './Shop.styles.scss';
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 
-import { ProductsContext } from '../../contexts/Products.context';
-import ProductCard from '../shared/productCard/ProductCard.shared';
+import { CategoriesContext } from '../../contexts/Categories.context';
+import CategoryPreview from '../categoryPreview/CategoryPreview.component';
 
 const Shop = () => {
-  const { products } = useContext(ProductsContext);
+  const { categoriesMap } = useContext(CategoriesContext);
+  const isEmpty = Object.keys(categoriesMap).length === 0;
 
   return (
     <div className="shop">
-      {!products.length ? (
-        <h1>loading</h1>
+      {isEmpty ? (
+        <h1 style={{ alignText: 'center', fontSize: '8rem' }}>loading</h1>
       ) : (
-        products.map((product) => <ProductCard key={product.id} product={product} />)
+        Object.keys(categoriesMap).map((title) => {
+          const products = categoriesMap[title];
+          return <CategoryPreview key={title} title={title} products={products} />;
+        })
       )}
     </div>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { Navbar } from './components';
-import { CheckoutPage, Home, Shop, SignIn, SignUp } from './pages';
+import { CategoryPage, Navbar } from './components';
+import { CheckoutPage, HatsPage, Home, Shop, SignIn, SignUp } from './pages';
 
 const App = () => {
   const CATEGORIES = [
@@ -40,7 +40,8 @@ const App = () => {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route index element={<Home clotheCategories={CATEGORIES} />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/*" element={<Shop />} />
+          <Route path="/shop/:category" element={<CategoryPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
       </Routes>
